@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>CSS Mem Slider</title>
+  </head>
+  <body>
+    <header>
+      <h1>cssMemSlider</h1>
+      <h2>html & css only</h2>
+    </header>
+    <div class="slider">
+      <input type="radio" name="mems" id="slide1" checked />
+      <input type="radio" name="mems" id="slide2" />
+      <input type="radio" name="mems" id="slide3" />
+      <input type="radio" name="mems" id="slide4" />
+      <ul class="mems-images-block">
+        <li class="mems-image-container">
+          <img
+            class="mems-image"
+            src="./assets/images/1.webp"
+            alt=""
+            srcset=""
+          />
+        </li>
+        <li class="mems-image-container">
+          <img
+            class="mems-image"
+            src="./assets/images/2.jpg"
+            alt=""
+            srcset=""
+          />
+        </li>
+        <li class="mems-image-container">
+          <img
+            class="mems-image"
+            src="./assets/images/3.png"
+            alt=""
+            srcset=""
+          />
+        </li>
+        <li class="mems-image-container">
+          <img
+            class="mems-image"
+            src="./assets/images/4.jpg"
+            alt=""
+            srcset=""
+          />
+        </li>
+      </ul>
+      <div class="helper">
+        <ul class="mems-caption-block">
+          <li class="mems-caption">Slide1</li>
+          <li class="mems-caption">Slide2</li>
+          <li class="mems-caption">Slide3</li>
+          <li class="mems-caption">Slide4</li>
+        </ul>
+        <div class="mems-buttons-block">
+          <label class="mems-button" for="slide1"></label>
+          <label class="mems-button" for="slide2"></label>
+          <label class="mems-button" for="slide3"></label>
+          <label class="mems-button" for="slide4"></label>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
