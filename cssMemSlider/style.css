@@ -100,8 +100,9 @@ input {
   line-height: 0;
   color: antiquewhite;
   visibility: hidden;
-  transform: rotateX(-90deg);
-  transition: transform 1s cubic-bezier(0.6, 0.1, 0.2, 0.1);
+  animation: none;
+  transform: rotatex(-90deg);
+  transition: transform 1s;
 }
 
 .mems-buttons-block {
@@ -115,7 +116,6 @@ input {
   display: inline-flex;
   justify-content: center;
   align-items: baseline;
-  /* box-sizing: initial; */
   width: 25%;
   aspect-ratio: 1/1;
 }
@@ -138,41 +138,52 @@ input {
   border-color: var(--btn-color-hover);
 }
 
-input:nth-of-type(1):checked ~ ul li:nth-of-type(1),
+input:nth-of-type(1):checked ~ ul li:nth-of-type(1) {
+  width: 100%;
+}
+
 input:nth-of-type(1):checked ~ .helper ul li:nth-of-type(1) {
   width: 100%;
   font-size: 2rem;
   line-height: 2rem;
   visibility: initial;
-  transform: translate3d(0, 0, 0);
-  transform: rotateX(0);
+  transform: rotatex(0);
 }
 
-input:nth-of-type(2):checked ~ ul li:nth-of-type(2),
+input:nth-of-type(2):checked ~ ul li:nth-of-type(2) {
+  width: 100%;
+}
+
 input:nth-of-type(2):checked ~ .helper ul li:nth-of-type(2) {
   width: 100%;
   font-size: 2rem;
   line-height: 2rem;
   visibility: initial;
-  transform: translate3d(0, 0, 0);
+  transform: rotatex(0);
 }
 
-input:nth-of-type(3):checked ~ ul li:nth-of-type(3),
+input:nth-of-type(3):checked ~ ul li:nth-of-type(3) {
+  width: 100%;
+}
+
 input:nth-of-type(3):checked ~ .helper ul li:nth-of-type(3) {
   width: 100%;
   font-size: 2rem;
   line-height: 2rem;
   visibility: initial;
-  transform: translate3d(0, 0, 0);
+  transform: rotatex(0);
 }
 
-input:nth-of-type(4):checked ~ ul li:nth-of-type(4),
+input:nth-of-type(4):checked ~ ul li:nth-of-type(4) {
+  width: 100%;
+}
+
 input:nth-of-type(4):checked ~ .helper ul li:nth-of-type(4) {
   width: 100%;
   font-size: 2rem;
   line-height: 2rem;
   visibility: initial;
-  transform: translate3d(0, 0, 0);
+  transform: rotatex(0);
 }
 
 input:nth-of-type(1):active
