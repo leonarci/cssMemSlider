@@ -1,3 +1,9 @@
+:root {
+  --btn-color: blue;
+  --btn-color-hover: white;
+  --btn-color-active: lightgray;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -35,9 +41,9 @@ h2 {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  row-gap: 2rem;
-  width: 70vw;
-  height: 40vw;
+  row-gap: 3%;
+  width: 65%;
+  aspect-ratio: 16/9;
   overflow: hidden;
   margin: 0 auto;
   padding: 2rem;
@@ -64,6 +70,8 @@ input {
 .mems-image-container {
   width: 0%;
   display: flex;
+  transform: perspective(500px) translate3d(0, 0, -400px);
+  transition: transform 2s;
 }
 
 .mems-image {
@@ -77,6 +85,7 @@ input {
 
 .helper {
   width: 90%;
+  height: 7%;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -85,6 +94,7 @@ input {
 .mems-caption-block {
   display: inline-flex;
   flex-flow: row nowrap;
+  align-items: center;
   overflow: hidden;
   width: 70%;
 }
@@ -95,40 +105,127 @@ input {
   font-size: 2rem;
   color: #fff;
   visibility: hidden;
+  transform: translate(40%);
+  transition: transform 1s;
 }
 
 .mems-buttons-block {
+  width: 30%;
   display: inline-flex;
   flex-direction: row;
   justify-content: flex-end;
 }
 
-.mems-button {
-  display: inline-block;
-  width: 2rem;
-  height: 2rem;
-  margin-right: 1rem;
+.mems-button-label {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: initial;
+  height: 100%;
+  aspect-ratio: 1/1;
   border-radius: 50%;
-  background-color: #fff;
+}
+
+.mems-button-label:hover {
+  cursor: pointer;
+}
+
+.mems-button {
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  border: 0.25rem solid var(--btn-color);
+  background-color: var(--btn-color);
+}
+
+.mems-button-label:hover > .mems-button {
+  background-color: var(--btn-color-hover);
+  border-color: var(--btn-color-hover);
 }
 
 input:nth-of-type(1):checked ~ ul li:nth-of-type(1),
 input:nth-of-type(1):checked ~ .helper ul li:nth-of-type(1) {
   width: 100%;
   visibility: initial;
+  transform: translate3d(0, 0, 0);
 }
 input:nth-of-type(2):checked ~ ul li:nth-of-type(2),
 input:nth-of-type(2):checked ~ .helper ul li:nth-of-type(2) {
   width: 100%;
   visibility: initial;
+  transform: translate3d(0, 0, 0);
 }
 input:nth-of-type(3):checked ~ ul li:nth-of-type(3),
 input:nth-of-type(3):checked ~ .helper ul li:nth-of-type(3) {
   width: 100%;
   visibility: initial;
+  transform: translate3d(0, 0, 0);
 }
 input:nth-of-type(4):checked ~ ul li:nth-of-type(4),
 input:nth-of-type(4):checked ~ .helper ul li:nth-of-type(4) {
   width: 100%;
   visibility: initial;
+  transform: translate3d(0, 0, 0);
+}
+
+
+input:nth-of-type(1):active ~ .helper .mems-button-label:nth-of-type(1) .mems-button {
+  background-color: var(--btn-color-active);
+  border: 0.25rem solid var(--btn-color-active);
+}
+
+input:nth-of-type(2):active ~ .helper .mems-button-label:nth-of-type(2) .mems-button {
+  background-color: var(--btn-color-active);
+  border: 0.25rem solid var(--btn-color-active);
+}
+
+input:nth-of-type(3):active ~ .helper .mems-button-label:nth-of-type(3) .mems-button {
+  background-color: var(--btn-color-active);
+  border: 0.25rem solid var(--btn-color-active);
+}
+
+input:nth-of-type(4):active ~ .helper .mems-button-label:nth-of-type(4) .mems-button {
+  background-color: var(--btn-color-active);
+  border: 0.25rem solid var(--btn-color-active);
+}
+
+
+input:nth-of-type(1):checked ~ .helper .mems-button-label:nth-of-type(1) .mems-button {
+  background-color: transparent;
+  border: 0.25rem solid var(--btn-color);
+}
+
+input:nth-of-type(2):checked ~ .helper .mems-button-label:nth-of-type(2) .mems-button {
+  background-color: initial;
+  border: 0.25rem solid var(--btn-color);
+}
+
+input:nth-of-type(3):checked ~ .helper .mems-button-label:nth-of-type(3) .mems-button {
+  background-color: initial;
+  border: 0.25rem solid var(--btn-color);
+}
+
+input:nth-of-type(4):checked ~ .helper .mems-button-label:nth-of-type(4) .mems-button {
+  background-color: initial;
+  border: 0.25rem solid var(--btn-color);
+}
+
+input:nth-of-type(1):checked ~ .helper .mems-button-label:nth-of-type(1):hover .mems-button {
+  background-color: transparent;
+  border: 0.25rem solid var(--btn-color-hover);
+}
+
+input:nth-of-type(2):checked ~ .helper .mems-button-label:nth-of-type(2):hover .mems-button {
+  background-color: transparent;
+  border: 0.25rem solid var(--btn-color-hover);
+}
+
+input:nth-of-type(3):checked ~ .helper .mems-button-label:nth-of-type(3):hover .mems-button {
+  background-color: transparent;
+  border: 0.25rem solid var(--btn-color-hover);
+}
+
+input:nth-of-type(4):checked ~ .helper .mems-button-label:nth-of-type(4):hover .mems-button {
+  background-color: transparent;
+  border: 0.25rem solid var(--btn-color-hover);
 }
