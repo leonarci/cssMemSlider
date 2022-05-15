@@ -1,0 +1,318 @@
+:root {
+  --btn-color: #8789c0;
+  --btn-color-hover: #c2cae8;
+  --btn-color-active: #45f0df;
+}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #636363;
+  color: antiquewhite;
+  min-width: 20rem;
+}
+
+header {
+  padding: 1.5rem 0 0;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.6rem;
+  width: 60%;
+  margin: 3rem auto 0;
+  padding: 2%;
+  background-color: #4c4c4c;
+  border-radius: 0.6rem;
+}
+
+input {
+  display: none;
+}
+
+.mems-images-block {
+  list-style: none;
+  display: flex;
+  flex-flow: row nowrap;
+  width: 90%;
+  aspect-ratio: 16/9;
+  margin: 0 auto;
+  background: #636363;
+  border-radius: 0.6rem;
+  overflow: hidden;
+}
+
+.mems-image-container {
+  width: 0%;
+  display: flex;
+  transition: width 1s;
+}
+
+.mems-image {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 0.6rem;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.helper {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.mems-caption-block {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  width: 70%;
+  height: 2rem;
+  overflow: hidden;
+}
+
+.mems-caption {
+  display: block;
+  width: 0%;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 0;
+  line-height: 0;
+  color: antiquewhite;
+  animation: none;
+  transform: rotatex(-90deg);
+  transition: transform 1s;
+}
+
+.mems-buttons-block {
+  width: 7.5rem;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.mems-button-label {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  aspect-ratio: 1/1;
+}
+
+.mems-button-label:hover {
+  cursor: pointer;
+}
+
+.mems-button {
+  width: 65%;
+  height: 65%;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 0.15rem solid var(--btn-color);
+  background-color: var(--btn-color);
+}
+
+.mems-button-label:hover > .mems-button {
+  background-color: var(--btn-color-hover);
+  border-color: var(--btn-color-hover);
+}
+
+/* Show selected image */
+
+input:nth-of-type(1):checked
+  ~ .mems-images-block
+  .mems-image-container:nth-of-type(1) {
+  width: 100%;
+}
+
+input:nth-of-type(2):checked
+  ~ .mems-images-block
+  .mems-image-container:nth-of-type(2) {
+  width: 100%;
+}
+
+input:nth-of-type(3):checked
+  ~ .mems-images-block
+  .mems-image-container:nth-of-type(3) {
+  width: 100%;
+}
+
+input:nth-of-type(4):checked
+  ~ .mems-images-block
+  .mems-image-container:nth-of-type(4) {
+  width: 100%;
+}
+
+/* Show caption to selected image */
+
+input:nth-of-type(1):checked ~ .helper .mems-caption:nth-of-type(1) {
+  width: 100%;
+  font-size: calc(0.5rem + 1vw);
+  line-height: calc(0.5rem + 1vw);
+  transform: rotatex(0);
+}
+
+input:nth-of-type(2):checked ~ .helper .mems-caption:nth-of-type(2) {
+  width: 100%;
+  font-size: calc(0.5rem + 1vw);
+  line-height: calc(0.5rem + 1vw);
+  transform: rotatex(0);
+}
+
+input:nth-of-type(3):checked ~ .helper .mems-caption:nth-of-type(3) {
+  width: 100%;
+  font-size: calc(0.5rem + 1vw);
+  line-height: calc(0.5rem + 1vw);
+  transform: rotatex(0);
+}
+
+input:nth-of-type(4):checked ~ .helper .mems-caption:nth-of-type(4) {
+  width: 100%;
+  font-size: calc(0.5rem + 1vw);
+  line-height: calc(0.5rem + 1vw);
+  transform: rotatex(0);
+}
+
+/* Styling button states */
+
+input:nth-of-type(1):active
+  ~ .helper
+  .mems-button-label:nth-of-type(1)
+  .mems-button {
+  background-color: var(--btn-color-active);
+  border: 0.15rem solid var(--btn-color-active);
+}
+
+input:nth-of-type(2):active
+  ~ .helper
+  .mems-button-label:nth-of-type(2)
+  .mems-button {
+  background-color: var(--btn-color-active);
+  border: 0.15rem solid var(--btn-color-active);
+}
+
+input:nth-of-type(3):active
+  ~ .helper
+  .mems-button-label:nth-of-type(3)
+  .mems-button {
+  background-color: var(--btn-color-active);
+  border: 0.15rem solid var(--btn-color-active);
+}
+
+input:nth-of-type(4):active
+  ~ .helper
+  .mems-button-label:nth-of-type(4)
+  .mems-button {
+  background-color: var(--btn-color-active);
+  border: 0.15rem solid var(--btn-color-active);
+}
+
+input:nth-of-type(1):checked
+  ~ .helper
+  .mems-button-label:nth-of-type(1)
+  .mems-button {
+  background-color: transparent;
+  border: 0.15rem solid var(--btn-color);
+}
+
+input:nth-of-type(2):checked
+  ~ .helper
+  .mems-button-label:nth-of-type(2)
+  .mems-button {
+  background-color: initial;
+  border: 0.15rem solid var(--btn-color);
+}
+
+input:nth-of-type(3):checked
+  ~ .helper
+  .mems-button-label:nth-of-type(3)
+  .mems-button {
+  background-color: initial;
+  border: 0.15rem solid var(--btn-color);
+}
+
+input:nth-of-type(4):checked
+  ~ .helper
+  .mems-button-label:nth-of-type(4)
+  .mems-button {
+  background-color: initial;
+  border: 0.15rem solid var(--btn-color);
+}
+
+input:nth-of-type(1):checked
+  ~ .helper
+  .mems-button-label:nth-of-type(1):hover
+  .mems-button {
+  background-color: transparent;
+  border: 0.15rem solid var(--btn-color-hover);
+}
+
+input:nth-of-type(2):checked
+  ~ .helper
+  .mems-button-label:nth-of-type(2):hover
+  .mems-button {
+  background-color: transparent;
+  border: 0.15rem solid var(--btn-color-hover);
+}
+
+input:nth-of-type(3):checked
+  ~ .helper
+  .mems-button-label:nth-of-type(3):hover
+  .mems-button {
+  background-color: transparent;
+  border: 0.15rem solid var(--btn-color-hover);
+}
+
+input:nth-of-type(4):checked
+  ~ .helper
+  .mems-button-label:nth-of-type(4):hover
+  .mems-button {
+  background-color: transparent;
+  border: 0.15rem solid var(--btn-color-hover);
+}
+
+@media screen and (max-width: 425px) {
+  .slider {
+    width: 90%;
+  }
+
+  .helper {
+    flex-direction: column;
+    justify-content: flex-start;
+    row-gap: 0.6rem;
+  }
+
+  .mems-caption-block {
+    width: 100%;
+    height: 1rem;
+    align-items: flex-start;
+  }
+
+  .mems-buttons-block {
+    order: -1;
+    align-self: center;
+    justify-content: center;
+    width: 7.5rem;
+  }
+}

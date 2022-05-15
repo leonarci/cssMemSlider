@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>CSS Mem Slider</title>
+  </head>
+  <body>
+    <header>
+      <h1>cssMemSlider</h1>
+      <h2>html & css only</h2>
+    </header>
+    <div class="slider">
+      <input type="radio" name="mems" id="slide1" checked />
+      <input type="radio" name="mems" id="slide2" />
+      <input type="radio" name="mems" id="slide3" />
+      <input type="radio" name="mems" id="slide4" />
+      <ul class="mems-images-block">
+        <li class="mems-image-container">
+          <img
+            class="mems-image"
+            src="./assets/images/1.jpeg"
+            alt=""
+            srcset=""
+          />
+        </li>
+        <li class="mems-image-container">
+          <img
+            class="mems-image"
+            src="./assets/images/2.jpg"
+            alt=""
+            srcset=""
+          />
+        </li>
+        <li class="mems-image-container">
+          <img
+            class="mems-image"
+            src="./assets/images/3.jpeg"
+            alt=""
+            srcset=""
+          />
+        </li>
+        <li class="mems-image-container">
+          <img
+            class="mems-image"
+            src="./assets/images/4.jpeg"
+            alt=""
+            srcset=""
+          />
+        </li>
+      </ul>
+      <div class="helper">
+        <ul class="mems-caption-block">
+          <li class="mems-caption" title="Давайте-ка приготовимся к Кроссчеку!">
+            Let's get ready to Crosscheck!
+          </li>
+          <li
+            class="mems-caption"
+            title="Полон энергии после окончания проекта"
+          >
+            Filling full of energy after finishing project
+          </li>
+          <li class="mems-caption" title="Получена рецензия от Студент1">
+            Recieved review from Student1
+          </li>
+          <li class="mems-caption" title="Как твой прогесс на этой неделе?">
+            How is your progress this week?
+          </li>
+        </ul>
+        <div class="mems-buttons-block">
+          <label class="mems-button-label" for="slide1"
+            ><div class="mems-button"></div
+          ></label>
+          <label class="mems-button-label" for="slide2"
+            ><div class="mems-button"></div
+          ></label>
+          <label class="mems-button-label" for="slide3"
+            ><div class="mems-button"></div
+          ></label>
+          <label class="mems-button-label" for="slide4"
+            ><div class="mems-button"></div
+          ></label>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
