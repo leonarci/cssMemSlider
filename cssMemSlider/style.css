@@ -100,7 +100,6 @@ input {
   font-size: 0;
   line-height: 0;
   color: antiquewhite;
-  visibility: hidden;
   animation: none;
   transform: rotatex(-90deg);
   transition: transform 1s;
@@ -126,8 +125,8 @@ input {
 }
 
 .mems-button {
-  width: 75%;
-  height: 75%;
+  width: 65%;
+  height: 65%;
   border-radius: 50%;
   box-sizing: border-box;
   border: 0.15rem solid var(--btn-color);
@@ -147,7 +146,6 @@ input:nth-of-type(1):checked ~ .helper ul li:nth-of-type(1) {
   width: 100%;
   font-size: calc(0.5rem + 1vw);
   line-height: calc(0.5rem + 1vw);
-  visibility: initial;
   transform: rotatex(0);
 }
 
@@ -159,7 +157,6 @@ input:nth-of-type(2):checked ~ .helper ul li:nth-of-type(2) {
   width: 100%;
   font-size: calc(0.5rem + 1vw);
   line-height: calc(0.5rem + 1vw);
-  visibility: initial;
   transform: rotatex(0);
 }
 
@@ -171,7 +168,6 @@ input:nth-of-type(3):checked ~ .helper ul li:nth-of-type(3) {
   width: 100%;
   font-size: calc(0.5rem + 1vw);
   line-height: calc(0.5rem + 1vw);
-  visibility: initial;
   transform: rotatex(0);
 }
 
@@ -183,7 +179,6 @@ input:nth-of-type(4):checked ~ .helper ul li:nth-of-type(4) {
   width: 100%;
   font-size: calc(0.5rem + 1vw);
   line-height: calc(0.5rem + 1vw);
-  visibility: initial;
   transform: rotatex(0);
 }
 
